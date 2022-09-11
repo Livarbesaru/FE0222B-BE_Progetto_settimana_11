@@ -1,0 +1,675 @@
+{
+	"info": {
+		"_postman_id": "ae9cac9f-9436-4b24-9c4b-edc305893f99",
+		"name": "Progetto 11",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21022299"
+	},
+	"item": [
+		{
+			"name": "Book",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4MDExNTMsImV4cCI6MTY2MzY2NTE1M30.J1EiIg_XcG1CgKQOoVIt3hElIJXNu1mQ8D3G5MkT6ibzUM5RCrOB6sDkV_QQJIABFoJ1Q9DZVhgK1gOubWFv5g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"milano657\",\r\n    \"categories\":[\r\n        {\r\n            \"name\":\"Commedia\"\r\n        },\r\n        {\r\n            \"name\":\"Avventura\"\r\n        }\r\n    ],\r\n    \"authors\":[\r\n        {\r\n            \"name\":\"filippo\",\r\n            \"surname\":\"maricano\"\r\n        }\r\n    ],\r\n    \"price\":12.60,\r\n    \"date\":\"2011-05-03\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/book/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI0NzI1NTUsImV4cCI6MTY2MzMzNjU1NX0.GK_sz4I7emz-n1ylAB1g1yqRlFw9Es77q4gsu7E9waPMhoGC0huR_Uf26QYD9Yjk-2mA4vU0N4UrB0hMZAUdsw",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idBook\":488,\r\n    \"name\":\"fatal maricano\",\r\n    \"categories\":[\r\n        {\r\n            \"name\":\"commedia\"\r\n        },\r\n        {\r\n            \"name\":\"horror\"\r\n        }\r\n    ],\r\n    \"authors\":[\r\n        {\r\n            \"name\":\"gianni\",\r\n            \"surname\":\"maricano\"\r\n        },\r\n                {\r\n            \"name\":\"rosi\",\r\n            \"surname\":\"bianchi\"\r\n        }\r\n    ],\r\n    \"price\":15.60,\r\n    \"date\":\"2021-05-03\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/book/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4MDg3MTUsImV4cCI6MTY2MzY3MjcxNX0.X-aHODPlcwATLogAuILf-D_FgOgZJtGPy5UWvf5E6ZuOQUOkNRO0J8OG8geLay4bx5ij8i8gfScn2EOpK-y1CA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/book/get/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"get",
+								"6"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByAuthor",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4MDg3MTUsImV4cCI6MTY2MzY3MjcxNX0.X-aHODPlcwATLogAuILf-D_FgOgZJtGPy5UWvf5E6ZuOQUOkNRO0J8OG8geLay4bx5ij8i8gfScn2EOpK-y1CA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/book/get/authorbooks/28",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"get",
+								"authorbooks",
+								"28"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4MDg3MTUsImV4cCI6MTY2MzY3MjcxNX0.X-aHODPlcwATLogAuILf-D_FgOgZJtGPy5UWvf5E6ZuOQUOkNRO0J8OG8geLay4bx5ij8i8gfScn2EOpK-y1CA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/book/get/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"get",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByCategory",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4MDg3MTUsImV4cCI6MTY2MzY3MjcxNX0.X-aHODPlcwATLogAuILf-D_FgOgZJtGPy5UWvf5E6ZuOQUOkNRO0J8OG8geLay4bx5ij8i8gfScn2EOpK-y1CA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/book/get/categorybooks/11",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"get",
+								"categorybooks",
+								"11"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4MDg3MTUsImV4cCI6MTY2MzY3MjcxNX0.X-aHODPlcwATLogAuILf-D_FgOgZJtGPy5UWvf5E6ZuOQUOkNRO0J8OG8geLay4bx5ij8i8gfScn2EOpK-y1CA",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/book/delete/23",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"book",
+								"delete",
+								"23"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Category",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4MDExNTMsImV4cCI6MTY2MzY2NTE1M30.J1EiIg_XcG1CgKQOoVIt3hElIJXNu1mQ8D3G5MkT6ibzUM5RCrOB6sDkV_QQJIABFoJ1Q9DZVhgK1gOubWFv5g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"banane64\",\r\n    \"books\":[]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/category/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4MDExNTMsImV4cCI6MTY2MzY2NTE1M30.J1EiIg_XcG1CgKQOoVIt3hElIJXNu1mQ8D3G5MkT6ibzUM5RCrOB6sDkV_QQJIABFoJ1Q9DZVhgK1gOubWFv5g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idCategory\":390,\r\n    \"name\":\"commedia\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/category/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4MDExNTMsImV4cCI6MTY2MzY2NTE1M30.J1EiIg_XcG1CgKQOoVIt3hElIJXNu1mQ8D3G5MkT6ibzUM5RCrOB6sDkV_QQJIABFoJ1Q9DZVhgK1gOubWFv5g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/category/delete/18",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								"delete",
+								"18"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetById",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4MDExNTMsImV4cCI6MTY2MzY2NTE1M30.J1EiIg_XcG1CgKQOoVIt3hElIJXNu1mQ8D3G5MkT6ibzUM5RCrOB6sDkV_QQJIABFoJ1Q9DZVhgK1gOubWFv5g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/category/get/29",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								"get",
+								"29"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetByAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4MDExNTMsImV4cCI6MTY2MzY2NTE1M30.J1EiIg_XcG1CgKQOoVIt3hElIJXNu1mQ8D3G5MkT6ibzUM5RCrOB6sDkV_QQJIABFoJ1Q9DZVhgK1gOubWFv5g",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/category/get/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"category",
+								"get",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Author",
+			"item": [
+				{
+					"name": "Add",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4MDExNTMsImV4cCI6MTY2MzY2NTE1M30.J1EiIg_XcG1CgKQOoVIt3hElIJXNu1mQ8D3G5MkT6ibzUM5RCrOB6sDkV_QQJIABFoJ1Q9DZVhgK1gOubWFv5g",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"gialli\",\r\n    \"surname\":\"cagoni\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/author/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"author",
+								"add"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4NDE5ODcsImV4cCI6MTY2MzcwNTk4N30.6pU1hXyjLjsgfxiU_o21FzsXCVqfYtu6lnf0uwNlDHmMoTp0GHGwXhFOlxwaNBPH8PgMVOrSBn_uH2ayWl52ew",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"idAuthor\":309,\r\n    \"name\":\"gialli\",\r\n    \"surname\":\"blu\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/author/edit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"author",
+								"edit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4NDE5ODcsImV4cCI6MTY2MzcwNTk4N30.6pU1hXyjLjsgfxiU_o21FzsXCVqfYtu6lnf0uwNlDHmMoTp0GHGwXhFOlxwaNBPH8PgMVOrSBn_uH2ayWl52ew",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/author/delete/12",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"author",
+								"delete",
+								"12"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4NDE5ODcsImV4cCI6MTY2MzcwNTk4N30.6pU1hXyjLjsgfxiU_o21FzsXCVqfYtu6lnf0uwNlDHmMoTp0GHGwXhFOlxwaNBPH8PgMVOrSBn_uH2ayWl52ew",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/author/get/34",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"author",
+								"get",
+								"34"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GetAll",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"warning": "This is a duplicate header and will be overridden by the Authorization header generated by Postman.",
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4NDE5ODcsImV4cCI6MTY2MzcwNTk4N30.6pU1hXyjLjsgfxiU_o21FzsXCVqfYtu6lnf0uwNlDHmMoTp0GHGwXhFOlxwaNBPH8PgMVOrSBn_uH2ayWl52ew",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/author/get/all",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"author",
+								"get",
+								"all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"bananaSD2\",\r\n    \"password\":\"bananaSD2\",\r\n    \"email\":\"dio@bananaSD2.it\",\r\n    \"isActive\":true,\r\n    \"roles\":[\r\n        \"user\"\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userName\":\"banana\",\r\n    \"password\":\"banana\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetUser",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI0NzI1NTUsImV4cCI6MTY2MzMzNjU1NX0.GK_sz4I7emz-n1ylAB1g1yqRlFw9Es77q4gsu7E9waPMhoGC0huR_Uf26QYD9Yjk-2mA4vU0N4UrB0hMZAUdsw",
+						"type": "text"
+					},
+					{
+						"key": "",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/user/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"1"
+					],
+					"query": [
+						{
+							"key": "",
+							"value": null,
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4MDg3MTUsImV4cCI6MTY2MzY3MjcxNX0.X-aHODPlcwATLogAuILf-D_FgOgZJtGPy5UWvf5E6ZuOQUOkNRO0J8OG8geLay4bx5ij8i8gfScn2EOpK-y1CA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "Authorization",
+			"value": "Bearer eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJiYW5hbmEiLCJpYXQiOjE2NjI4MDExNTMsImV4cCI6MTY2MzY2NTE1M30.J1EiIg_XcG1CgKQOoVIt3hElIJXNu1mQ8D3G5MkT6ibzUM5RCrOB6sDkV_QQJIABFoJ1Q9DZVhgK1gOubWFv5g",
+			"type": "string"
+		}
+	]
+}
