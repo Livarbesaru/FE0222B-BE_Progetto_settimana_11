@@ -44,6 +44,7 @@ public class AuthController {
 	//@RequestBody fa si che venga recuperato il contenuto dal body della richiesta (ovvero un oggetto JSON con le credenziali)
 	public ResponseEntity<?> authenticateUser(@RequestBody LoginRequest loginRequest) {
 
+		int numero=3;
 		Authentication authentication = authenticationManager.authenticate( //Si genera il Token di autenticazione
 				new UsernamePasswordAuthenticationToken(loginRequest.getUserName().toLowerCase(), loginRequest.getPassword()));
 		
