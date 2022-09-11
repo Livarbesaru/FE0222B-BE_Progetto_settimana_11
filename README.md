@@ -7,7 +7,7 @@ Per effettuare l'aggiunta di un utente bisogna passare -username -password -emai
 
 Al momento swagger risulta essere inaccessibile per via di un problema con le autorizzazioni
 
-Mentre i test riesco a fare le chiamate a buon fine se passati i valori giusti, ma danno sempre errore
+Mentre i test riesco a fare le chiamate a buon fine se passati i valori giusti, ma danno sempre errore nella console dei test
 
 l'aggiunta di category ha bisogno di -name
 
