@@ -63,13 +63,13 @@ public class AuthController {
 	}
 	
 	@PostMapping("/register")
-	public ResponseEntity<User> registerUser(@RequestBody UserDTO registerUser){
+	public ResponseEntity<?> registerUser(@RequestBody UserDTO registerUser){
 		try {
 			return new ResponseEntity<User>(userService.addUser(registerUser).get(), HttpStatus.OK);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return null;
+		return new ResponseEntity<String>("Errore nell'inserimento username od email gia presenti", HttpStatus.INTERNAL_SERVER_ERROR);
 	}
 
 }

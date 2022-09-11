@@ -14,6 +14,7 @@ import com.dblibrary.model.auth.User;
 import com.dblibrary.model.auth.UserDTO;
 import com.dblibrary.repository.RoleRepository;
 import com.dblibrary.repository.UserRepository;
+import com.dblibrary.util.exception.LibraryException;
 
 @Service
 public class UserService {
@@ -31,6 +32,11 @@ public class UserService {
 	
 	public Optional<User> addUser(UserDTO newUserDTO) throws Exception {
 		BCryptPasswordEncoder bCrypt = new BCryptPasswordEncoder();
+		
+		if(userRepository.findByUserName(newUserDTO.getUserName().toLowerCase()).isPresent() ||
+			userRepository.findByEmail(newUserDTO.getEmail()).isPresent()) {
+			throw new LibraryException("username o email gia esistenti");
+		}
 
 		Set<Role> roles = new HashSet<>();
 		User newUser=new User();
