@@ -72,7 +72,7 @@ public class UserService {
 		}else {
 			roles.add(new Role(Roles.ROLE_USER));
 		}
-		newUser.setUserName(newUserDTO.getUserName());
+		newUser.setUserName(newUserDTO.getUserName().toLowerCase());
 		newUser.setPassword(bCrypt.encode(newUserDTO.getPassword()));
 		newUser.setEmail(newUserDTO.getEmail());
 		newUser.setRoles(roles);
